@@ -1,12 +1,12 @@
 const networks = {
-  public: 'public',
+  mainnet: 'mainnet',
   test: 'testnet',
   local: 'local',
 }
 
 const hostnameToNetworkType = hostname => {
-  if (hostname === 'steexp.com' || hostname === 'publicnet.local')
-    return networks.public
+  if (hostname === 'blockexplorer.picn.cc' || hostname === 'publicnet.local')
+    return networks.mainnet
   else if (hostname === 'testnet.steexp.com' || hostname === 'testnet.local')
     return networks.test
   else return networks.local

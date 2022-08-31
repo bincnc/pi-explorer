@@ -35,9 +35,9 @@ class Transaction extends React.Component {
   render() {
     const {id, urlFn, fee, ledger, memoType, memo, opCount, time} = this.props
     if (!id) return null
-    
+
     setTitle(`Transaction ${id}`)
-    
+
     const {formatMessage} = this.props.intl
 
     return (
@@ -69,7 +69,7 @@ class Transaction extends React.Component {
                     <FormattedMessage id="fee" />
                   </td>
                   {/* <td>{fee} stroops</td> */}
-                  <td>{fee * 1e-7} Test-π</td>
+                  <td>{fee * 1e-7} π</td>
 
                 </tr>
                 <tr>

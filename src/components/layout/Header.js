@@ -39,12 +39,11 @@ class Header extends React.Component {
             />
           </Navbar.Form>
           <Navbar.Form pullRight>
-            <NetworkSelector
-              networkAddress={this.props.networkAddress}
-              networkType={this.props.networkType}
-              switchNetworkType={this.props.switchNetworkType}
-              setNetworkAddress={this.props.setNetworkAddress}
-            />
+            <div className={'Network-Selector'}>
+              <button onClick={() => {window.open('https://www.picn.cc')}} className={'is-inactive'}>
+                PICN.CC
+              </button>
+            </div>
           </Navbar.Form>
           <Nav>
             {/* <LinkContainer to="/graphs">
@@ -55,6 +54,10 @@ class Header extends React.Component {
                 <FormattedMessage id="operations" />
               </NavItem>
             </LinkContainer> */}
+            <NavItem>
+              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
+              <div onClick={() => {window.open('https://www.picn.cc/')}}>首页</div>
+            </NavItem>
             <LinkContainer to="/payments">
                 <NavItem>
                   <FormattedMessage id="payments" />
@@ -70,7 +73,18 @@ class Header extends React.Component {
                 <FormattedMessage id="ledgers" />
               </NavItem>
             </LinkContainer>
-
+            <NavItem>
+              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
+              <div onClick={() => {window.open('https://www.picn.cc/events.html')}}>大事记</div>
+            </NavItem>
+            <NavItem>
+              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
+              <div onClick={() => {window.open('https://www.picn.cc/question/all.html')}}>讨论区</div>
+            </NavItem>
+            <NavItem>
+              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
+              <div onClick={() => {window.open('https://www.picn.cc/chat')}}>聊天</div>
+            </NavItem>
             {/* <li className="divider-vertical" />
             <LinkContainer to="/assets">
               <MenuItem>

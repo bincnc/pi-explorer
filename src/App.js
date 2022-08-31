@@ -62,7 +62,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-json-pretty/src/JSONPretty.1337.css'
 import './App.css'
 
-const HOME_PUBLIC = 'https://steexp.com'
+const HOME_PUBLIC = 'http://blockexplorer.picn.cc/'
 const HOME_TESTNET = 'https://testnet.steexp.com'
 
 const storage = storageInit()
@@ -86,15 +86,16 @@ const locales = ['en', 'fr', 'hi', 'id', 'ja', 'ru', 'ur', 'vi', 'zh-Hans', 'zh-
 let initialLanguage =
   storage.getItem('language') || navigator.language || 'en'
 if(!locales.includes(initialLanguage) ){
-  initialLanguage = 'en'
+  initialLanguage = 'zh-Hans'
 }
 
 // Derive network type from the hostname.
 // Network settings determine which horizon instance to pull data from.
 const networkType = hostnameToNetworkType(window.location.hostname)
+console.log(networkType, 'networkType')
 const networkAddress =
   storage.getItem('networkAddress') || defaultNetworkAddresses[networkType]
-
+console.log(networkAddress, 'networkAddress')
 const getMessages = locale => {
   switch (locale) {
     case 'fr':
@@ -182,7 +183,7 @@ class App extends Component {
   // network switcher buttons in the header - public or testnet switch
   switchNetworkType = networkType => {
     window.location.href =
-      networkType === networks.public ? HOME_PUBLIC : HOME_TESTNET
+      networkType === networks.mainnet ? HOME_PUBLIC : HOME_TESTNET
   }
 
   languageSwitcher = event => {
@@ -203,7 +204,7 @@ class App extends Component {
         locale={this.state.language}
         messages={getMessages(this.state.language)}
       >
-        <Router basename="/blockexplorer">
+        <Router basename="">
           <div className="App">
             <Header
               networkAddress={this.state.networkAddress}

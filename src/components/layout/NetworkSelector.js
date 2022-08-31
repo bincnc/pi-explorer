@@ -4,7 +4,7 @@ import {networks} from '../../lib/stellar'
 const NetworkButton = ({networkType, selectedNetworkType, switchNetworkType}) =>
   <button
     className={networkType === selectedNetworkType ? 'is-active' : 'is-inactive'}
-    // onClick={e => switchNetworkType(networkType)}
+    onClick={e => switchNetworkType(networkType)}
   >
     {networkType.toUpperCase()}
   </button>
@@ -12,8 +12,8 @@ const NetworkButton = ({networkType, selectedNetworkType, switchNetworkType}) =>
 const NetworkSelector = props =>
   <div className="Network-Selector">
     {<NetworkButton
-        key={networks.test}
-        networkType={networks.test}
+        key={networks.mainnet}
+        networkType={networks.mainnet}
         selectedNetworkType={props.networkType}
         switchNetworkType={props.switchNetworkType}
       />

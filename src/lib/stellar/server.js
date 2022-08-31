@@ -1,11 +1,13 @@
 import sdk from './sdk'
-import networks from './networks'
 
 export const defaultNetworkAddresses = {
-  public: 'https://horizon.stellar.org',
-  test: 'https://horizon-testnet.stellar.org',
+  // public: 'https://horizon.stellar.org',
+  mainnet: 'http://blockexplorer.picn.cc:8081',
+  // test: 'https://horizon-testnet.stellar.org',
+  test: 'http://blockexplorer.picn.cc:8081',
   // local: 'http://localhost:8000',
-  local: 'https://api.testnet.minepi.com',
+  local: 'http://blockexplorer.picn.cc:8081',
+  // local: 'https://api.testnet.minepi.com',
 }
 
 /**
@@ -17,7 +19,7 @@ class WrappedServer extends sdk.Server {
   constructor(networkType, networkAddress, storage) {
     try {
       // allowHttp: public/test use HTTPS; local can use HTTP
-      super(networkAddress, {allowHttp: networkType === networks.local})
+      super(networkAddress, {allowHttp: true})
     } catch(err) {
       storage.removeItem('networkAddress')
       window.location.href = `/error/insecure-horizon-server/?${networkAddress}`
