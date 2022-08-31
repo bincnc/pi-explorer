@@ -2,11 +2,11 @@ import sdk from './sdk'
 
 export const defaultNetworkAddresses = {
   // public: 'https://horizon.stellar.org',
-  mainnet: 'http://blockexplorer.picn.cc:8081',
+  mainnet: 'http://apiblockexplorer.picn.cc',
   // test: 'https://horizon-testnet.stellar.org',
-  test: 'http://blockexplorer.picn.cc:8081',
+  test: 'http://apiblockexplorer.picn.cc',
   // local: 'http://localhost:8000',
-  local: 'http://blockexplorer.picn.cc:8081',
+  local: 'http://apiblockexplorer.picn.cc',
   // local: 'https://api.testnet.minepi.com',
 }
 
