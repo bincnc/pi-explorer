@@ -46,18 +46,6 @@ class Header extends React.Component {
             </div>
           </Navbar.Form>
           <Nav>
-            {/* <LinkContainer to="/graphs">
-              <NavItem>Graphs (beta)</NavItem>
-            </LinkContainer> */}
-            {/* <LinkContainer to="/operations">
-              <NavItem>
-                <FormattedMessage id="operations" />
-              </NavItem>
-            </LinkContainer> */}
-            <NavItem>
-              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
-              <div onClick={() => {window.open('https://www.picn.cc/')}}>首页</div>
-            </NavItem>
             <LinkContainer to="/payments">
                 <NavItem>
                   <FormattedMessage id="payments" />
@@ -74,17 +62,14 @@ class Header extends React.Component {
               </NavItem>
             </LinkContainer>
             <NavItem>
-              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
-              <div onClick={() => {window.open('https://www.picn.cc/events.html')}}>大事记</div>
+              <div onClick={() => {window.open('https://test.picn.cc')}}>节点检测</div>
             </NavItem>
-            <NavItem>
-              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
+{/*            <NavItem>
               <div onClick={() => {window.open('https://www.picn.cc/question/all.html')}}>讨论区</div>
             </NavItem>
             <NavItem>
-              {/*<Link to={'https://www.baidu.com'}>首页</Link>*/}
               <div onClick={() => {window.open('https://www.picn.cc/chat')}}>聊天</div>
-            </NavItem>
+            </NavItem>*/}
             {/* <li className="divider-vertical" />
             <LinkContainer to="/assets">
               <MenuItem>

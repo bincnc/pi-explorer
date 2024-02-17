@@ -24,7 +24,7 @@ RUN npm run build
 # nginx state for serving content
 FROM nginx:alpine
 
-EXPOSE 80
+EXPOSE 80 81
 
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html

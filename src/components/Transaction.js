@@ -35,9 +35,9 @@ class Transaction extends React.Component {
   render() {
     const {id, urlFn, fee, ledger, memoType, memo, opCount, time} = this.props
     if (!id) return null
-
+    
     setTitle(`Transaction ${id}`)
-
+    
     const {formatMessage} = this.props.intl
 
     return (

@@ -38,11 +38,11 @@ const opTypeComponentMap = {
   manage_buy_offer: Offer,
   manage_sell_offer: Offer,
   manage_offer: Offer, // < Protocol 11
-
+  
   path_payment_strict_send: PathPayment,
   path_payment_strict_receive: PathPayment,
   path_payment: PathPayment,  // < Protocol 12
-
+  
   payment: Payment,
   set_options: SetOptions,
 }
@@ -56,7 +56,7 @@ const SubOperation = ({op}) => {
 
 const Operation = ({compact, op, opURLFn, parentRenderTimestamp, is_transaction}) => {
   let opAccount
-
+  
   if (op.fromMuxed) {
     opAccount = op.fromMuxed
   } else if (op.from) {
@@ -94,7 +94,7 @@ const Operation = ({compact, op, opURLFn, parentRenderTimestamp, is_transaction}
           />
         </td>
       )}
-      <td >
+      <td > 
         <span title={op.time}>
           <TimeSynchronisedFormattedRelative
             // initialNow={parentRenderTimestamp}

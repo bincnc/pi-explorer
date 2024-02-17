@@ -298,7 +298,7 @@ class Account extends React.Component {
     const a = this.props.account
     return (
       <Grid>
-        {this.props.muxedAddress &&
+        {this.props.muxedAddress && 
         <Row>
           <MuxedAccountInfoPanel address={this.props.muxedAddress}/>
         </Row>
@@ -465,7 +465,7 @@ class AccountContainer extends React.Component {
   loadAccountByMuxedAddress(address) {
     const muxedAccount = MuxedAccount.fromAddress(address, '1')
     const publicAddress = muxedAccount.account.accountId()
-    this.loadAccountFromServer(publicAddress).then(account => {
+    this.loadAccountFromServer(publicAddress).then(account => { 
       this.setState({account, muxedAddress: address, isLoading: false})
       return null
     })
